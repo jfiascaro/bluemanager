@@ -5,12 +5,11 @@ export class SidebarService {
 
   menu: any = [
     {
-      title: 'Principal',
+      title: 'Administración',
       icon: 'mdi mdi-gauge',
       submenu: [
         { title: 'Dashboard', url: '/dashboard' },
-        { title: 'Dashboard', url: '/dashboard' },
-        { title: 'Dashboard', url: '/dashboard' },
+        { title: 'Organizations', url: '/organizations' }
       ]
     }
   ];

@@ -11,8 +11,8 @@ const PagesRoute: Routes = [
         path: '',
         component: PagesComponent,
         children: [
-            { path: 'dashboard', component: DashboardComponent },
-            { path: 'account-settings', component: AccountSettingsComponent },
+            { path: 'dashboard', component: DashboardComponent, data: {title: 'Dashboard'} },
+            { path: 'account-settings', component: AccountSettingsComponent, data: {title: 'Ajustes del Sistema'} },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
         ]
     }
