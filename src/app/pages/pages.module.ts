@@ -1,28 +1,31 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 import { PAGES_ROUTES } from './pages.route';
 
 import { SharedModule } from '../shared/shared.module';
 
+import { FormsModule } from '@angular/forms';
+
 import { PagesComponent } from './pages.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProgressComponent } from './progress/progress.component';
-import { GraphsComponent } from './graphs/graphs.component';
+
+import { ChartsModule } from 'ng2-charts';
+
+
 
 @NgModule({
     declarations: [
         PagesComponent,
-        DashboardComponent,
-        ProgressComponent,
-        GraphsComponent
-    ], 
+        DashboardComponent
+    ],
     exports: [
-        DashboardComponent,
-        ProgressComponent,
-        GraphsComponent
+        DashboardComponent
     ],
     imports: [
         SharedModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
     ]
 
 })
