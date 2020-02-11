@@ -10,13 +10,15 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ChartsModule } from 'ng2-charts';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 
 @NgModule({
     declarations: [
         PagesComponent,
-        DashboardComponent
+        DashboardComponent,
+        AccountSettingsComponent
     ],
     exports: [
         DashboardComponent
