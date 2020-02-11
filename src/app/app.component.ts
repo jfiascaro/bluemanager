@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SettingsService } from './services/settings.service';
+import { SettingsService } from './services/services.index';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,5 @@ import { SettingsService } from './services/settings.service';
 export class AppComponent {
   title = 'bluemanager';
 
-  constructor( public _ajustes: SettingsService) {
-    
-  }
+  constructor( public _ajustes: SettingsService) { }
 }

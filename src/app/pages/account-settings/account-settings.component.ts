@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { SettingsService } from '../../services/settings.service';
+import { SettingsService } from '../../services/services.index';
 
 
 @Component({
@@ -12,7 +11,7 @@ export class AccountSettingsComponent implements OnInit {
 
   constructor( public _ajustes: SettingsService) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.colocarCheck();
   }
 
@@ -25,7 +24,7 @@ export class AccountSettingsComponent implements OnInit {
 
   aplicarCheck( link: any) {
     const selectores: any = document.getElementsByClassName('selector');
-    for ( let ref of selectores) {
+    for ( const ref of selectores) {
       ref.classList.remove('working');
     }
     link.classList.add('working');
@@ -35,8 +34,8 @@ export class AccountSettingsComponent implements OnInit {
     const selectores: any = document.getElementsByClassName('selector');
     const tema = this._ajustes.ajustes.tema;
 
-    for ( let ref of selectores) {
-      if ( ref.getAttribute('data-theme')=== tema ){
+    for ( const ref of selectores) {
+      if ( ref.getAttribute('data-theme') === tema ) {
         ref.classList.add('working');
         break;
       }

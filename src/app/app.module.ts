@@ -11,7 +11,7 @@ import { PagesModule } from './pages/pages.module';
 import { FormsModule } from '@angular/forms';
 
 // Services
-import { SettingsService } from './services/settings.service';
+import { ServiceModule } from './services/service.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -26,10 +26,11 @@ import { RegisterComponent } from './login/register.component';
   imports: [
     BrowserModule,
     PagesModule,
+    ServiceModule,
     APP_ROUTES,
     FormsModule
   ],
-  providers: [SettingsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
