@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    let user = new User( 0, null, form.value.email, form.value.password, false )
+    let user = new User( 0, '', form.value.email, form.value.password )
 
     this._userService.loginUser( user, form.value.rememberme)
                 .subscribe( ( ) => this.router.navigate(['/dashboard']) );
