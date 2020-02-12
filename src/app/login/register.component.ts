@@ -49,13 +49,13 @@ export class RegisterComponent implements OnInit {
     }, { validators: this.validateEquals('password', 'confirmp' ) } );
 
 
-    this.form.setValue({
-      name: 'José Fiascaro',
-      email: 'jfiascaro@gmail.com',
-      password: '123456',
-      confirmp: '123456',
-      terms: true
-    });
+    // this.form.setValue({
+    //   name: 'José Fiascaro',
+    //   email: 'jfiascaro@gmail.com',
+    //   password: '123456',
+    //   confirmp: '123456',
+    //   terms: true
+    // });
   }
 
 
