@@ -8,7 +8,7 @@ import { APP_ROUTES } from './app.route';
 import { PagesModule } from './pages/pages.module';
 
 // Temporal
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Services
 import { ServiceModule } from './services/service.module';
@@ -28,7 +28,8 @@ import { RegisterComponent } from './login/register.component';
     PagesModule,
     ServiceModule,
     APP_ROUTES,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
