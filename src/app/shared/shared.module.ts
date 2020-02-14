@@ -8,11 +8,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { Page404Component } from './page404/page404.component';
 
+// Pipes
+import { PipesModule } from '../pipes/pipes.module';
+
 
 @NgModule({
     imports: [
         RouterModule,
-        CommonModule
+        CommonModule,
+        PipesModule
     ],
     declarations: [
         HeaderComponent,

@@ -8,8 +8,8 @@ export class SidebarService {
       title: 'Administración',
       icon: 'mdi mdi-gauge',
       submenu: [
-        { title: 'Dashboard', url: '/dashboard' },
-        { title: 'Organizations', url: '/organizations' }
+        { title: 'Dashboard', url: '/dashboard' }
+        // { title: 'Organizations', url: '/organizations' }
       ]
     }
   ];

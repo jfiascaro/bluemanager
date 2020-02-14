@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 // Modules
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { PipesModule } from '../pipes/pipes.module';
 
 // Components
 import { PagesComponent } from './pages.component';
@@ -29,7 +30,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        PipesModule
     ]
 
 })
