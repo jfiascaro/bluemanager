@@ -157,19 +157,20 @@
                     <div class="dropdown-menu dropdown-menu-right animated flipInY">
                         <ul class="dropdown-user">
                             <li>
-                                <div class="dw-user-box">
+                                <div class="dw-user-box" align="center">
                                     <div class="u-img"><img [src]=" img | imagen " alt="user"></div>
                                     <div class="u-text">
                                         <h4>{{ user.username }}</h4>
-                                        <p class="text-muted">{{ user.email }}</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        <p class="text-muted">{{ user.email }} </p>
+                                        <a routerLink="/profile" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
-                            <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
-                            <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                            <li><a routerLink="/profile"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a routerLink="/profdile"><i class="ti-wallet"></i> My Balance</a></li>
+                            <li><a routerLink="/prodfdile"><i class="ti-email"></i> Inbox</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li><a routerLink="/account-settings"><i class="ti-settings"></i> Account Setting</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a (click)="_userService.logoutUser()" class="pointer"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>

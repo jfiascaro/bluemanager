@@ -6,6 +6,7 @@ import { URL_SERVICES } from 'src/app/config/config';
 import  'rxjs/add/operator/map';
 import swal from 'sweetalert';
 import { Router } from '@angular/router';
+import { UploadFileService } from '../upload-files/upload-file.service';
 
 
 @Injectable()
@@ -16,7 +17,8 @@ export class UserService {
   token: string;
 
   constructor( public http: HttpClient,
-               public router: Router
+               public router: Router,
+               public _uploadFileService: UploadFileService
     ) {
     this.loadStorage();
   }
@@ -64,7 +66,8 @@ export class UserService {
     let url = URL_SERVICES + '/login';
     return this.http.post(url, user)
           .map( (resp:any) => {
-            this.saveStorage(resp.token, resp.user[0] )
+            this.saveStorage(resp.token, resp.user[0] );
+            console.log(resp.user[0]);
             return true;
           });
   }
@@ -79,4 +82,31 @@ export class UserService {
               });
    }
 
+   updateUser(user:User) {
+     let url = URL_SERVICES + '/users/' + user.id;
+     // url += '?token=' + this.token;
+
+     return this.http.put(url, user)
+          .map ((resp:any) => {
+              //this.user = resp.users;
+              this.saveStorage(this.token, resp.users);
+              swal('Profile updated', user.username, 'success' );
+              return true;
+          })
+   }
+
+
+   changePicture( file: File, id: number ){
+
+    this._uploadFileService.uploadFile(file, 'people', id)
+        .then( (resp: any) => {
+          console.log(resp);
+          //this.user.img = resp.user.img
+          swal('Photo Updated', this.user.username, 'success');
+          this.saveStorage(this.token, this.user);
+        })
+        .catch( resp => {
+          console.log(resp);
+        })
+   }
 }
