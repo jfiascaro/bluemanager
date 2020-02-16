@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProfileComponent } from './profile/profile.component';
+import { OrganizationsComponent } from './organizations/organizations.component';
 
 // Guards
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
@@ -20,6 +21,7 @@ const PagesRoute: Routes = [
             { path: 'dashboard', component: DashboardComponent, data: {title: 'Dashboard'} },
             { path: 'account-settings', component: AccountSettingsComponent, data: {title: 'Ajustes del Sistema'} },
             { path: 'profile', component: ProfileComponent, data: {title: 'Perfil del usuario'} },
+            { path: 'organizations', component: OrganizationsComponent, data: {title: 'Lista de Organizaciones'} },
 
             { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
         ]

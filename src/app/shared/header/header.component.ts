@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.user = this._userService.user;
-    this.img = 'img1-788.jpg'; /// pendiente para cambiar por la gestión de personas
+    this.img = 'img1-606.jpg'; /// pendiente para cambiar por la gestión de personas
   }
 
 }

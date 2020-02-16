@@ -1,3 +1,4 @@
+export { OrganizationsService } from './organizations/organizations.service';
 export { UserService } from './user/user.service';
 export { SettingsService } from './settings/settings.service';
 export { SharedService } from './shared/shared.service';
