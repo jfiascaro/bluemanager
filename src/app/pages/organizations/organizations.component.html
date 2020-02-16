@@ -11,32 +11,30 @@
         <div class="table-responsive">
             <!-- <table class="table color-table primary-table"> -->
             <table class="table">
-                <thead class="btn-themecolor disabled">
+                <thead class="btn-themecolor">
                     <tr>
                         <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>Organization</th>
+                        <th>email</th>
+                        <th>url</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Nigam</td>
-                        <td>Eichmann</td>
-                        <td>@Sonu</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Deshmukh</td>
-                        <td>Prohaska</td>
-                        <td>@Genelia</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Roshan</td>
-                        <td>Rogahn</td>
-                        <td>@Hritik</td>
+                    <tr *ngFor="let organization of organizations ">
+                        <td> {{ organization.id }} </td>
+                        <td> {{ organization.name }} </td>
+                        <td> {{ organization.email }} </td>
+                        <td> {{ organization.url }} </td>
+                        <button class="btn btn-info mt-1 mr-1" [routerLink]="[ '/organization', organization.id] ">
+                            <i class="fa fa-pencil "></i>
+                        </button>
+                        <button class="btn btn-danger mt-1" (click)="deleteOrganization( organization, i ) ">
+                            <i class="fa fa-trash "></i>
+                        </button>
+
+
+
                     </tr>
                 </tbody>
             </table>
