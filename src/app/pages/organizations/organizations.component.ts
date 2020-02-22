@@ -14,8 +14,12 @@ export class OrganizationsComponent implements OnInit {
   constructor( public _organizationService: OrganizationsService  ) { }
 
   ngOnInit() {
+    this.readOrganizatons();
+   }
+
+   readOrganizatons(){
     this._organizationService.getOrganizations()
-        .subscribe( (resp:any) => this.organizations = resp )
+        .subscribe( (resp:any) => this.organizations = resp );
    }
 
 }

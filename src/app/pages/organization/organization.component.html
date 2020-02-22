@@ -1,0 +1,55 @@
+<div class="card">
+    <div class="card-header btn-themecolor disabled">
+        <h4 class="m-b-0 text-white">Other Sample form</h4>
+    </div>
+
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="form" (ngSubmit)="createOrganization()">
+            <div class="form-body">
+                <h3 class="card-title">Person Info</h3>
+                <hr>
+                <div class="row p-t-20">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <input formControlName="name" name="name" type="text" id="name" class="form-control" placeholder="Organization Name">
+                            <small class="form-control-feedback"> This is inline help </small> </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">URL</label>
+                            <input formControlName="url" name="url" type="text" id="url" class="form-control" placeholder="Organization URL's Address">
+                            <small class="form-control-feedback"> This is inline help </small> </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+                <div class="row p-t-20">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input formControlName="email" name="email" type="text" id="email" class="form-control" placeholder="Organization Email">
+                            <small class="form-control-feedback"> This is inline help </small> </div>
+                    </div>
+                    <!--/span-->
+                    <div class="form-group">
+                        <label class="control-label">Organization's Logo</label>
+                        <div class="controls">
+                            <input formControlName="logo" name="logo" type="file" name="file" class="form-control" required="" aria-invalid="false">
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+            </div>
+            <div class="form-actions pull-right">
+                <button type="submit" class="btn btn-primary mr-1"> <i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-danger" routerLink="/organizations">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

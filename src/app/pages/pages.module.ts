@@ -7,7 +7,7 @@ import { PAGES_ROUTES } from './pages.route';
 import { SharedModule } from '../shared/shared.module';
 
 // Modules
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { PipesModule } from '../pipes/pipes.module';
 import { CommonModule } from '@angular/common';
@@ -18,6 +18,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
+import { OrganizationComponent } from './organization/organization.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { OrganizationsComponent } from './organizations/organizations.component'
         DashboardComponent,
         AccountSettingsComponent,
         ProfileComponent,
-        OrganizationsComponent
+        OrganizationsComponent,
+        OrganizationComponent
     ],
     exports: [
         DashboardComponent
@@ -36,6 +38,7 @@ import { OrganizationsComponent } from './organizations/organizations.component'
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
+        ReactiveFormsModule,
         ChartsModule,
         PipesModule
     ]
